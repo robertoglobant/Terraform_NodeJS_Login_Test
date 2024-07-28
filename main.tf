@@ -8,9 +8,8 @@ terraform {
 }
 
 provider "docker" {
-  host = "npipe:////./pipe/docker_engine"
+  host = "tcp://localhost:2375"
 }
-
 
 resource "docker_image" "db_image" {
   name = "registry.gitlab.com/testing_group6034130/testing_poc_mckesson/db-postgres:v1.00"
