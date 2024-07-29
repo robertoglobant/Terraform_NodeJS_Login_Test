@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "docker" {
-  host = "tcp://localhost:2375"
+  host = "tcp://127.0.0.1:2375"
 }
 
 resource "docker_image" "db_image" {
