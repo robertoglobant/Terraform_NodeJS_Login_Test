@@ -9,6 +9,11 @@ terraform {
 
 provider "docker" {
   host = "tcp://localhost:2375"
+
+registry_auth {
+    address     = "registry.gitlab.com"
+    config_file = pathexpand("~/.docker/config.json")
+  }
 }
 
 resource "docker_image" "db_image" {
